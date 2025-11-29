@@ -24,8 +24,8 @@ function Dashboard({ token, logout }) {
       const config = { headers: { Authorization: `Bearer ${token}` } };
       try {
         const [resShoes, resCats] = await Promise.all([
-          axios.get('http://localhost:8080/api/analytics/top-shoes', config),
-          axios.get('http://localhost:8080/api/analytics/categories', config)
+          axios.get('https://fastquote-cub6heevdabqh2a6.eastus-01.azurewebsites.net/api/analytics/top-shoes', config),
+          axios.get('https://fastquote-cub6heevdabqh2a6.eastus-01.azurewebsites.net/api/analytics/categories', config)
         ]);
         
         setTopShoes(resShoes.data);
