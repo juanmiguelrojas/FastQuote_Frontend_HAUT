@@ -13,7 +13,7 @@ function Login({ setToken }) {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:8080/auth/login', {
+      const response = await axios.post('https://fastquote-cub6heevdabqh2a6.eastus-01.azurewebsites.net/auth/login', {
         username,
         password
       });
